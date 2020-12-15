@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数独ジェネレーター</title>
+    <link rel="stylesheet" href="namberplace_generator.css">
+</head>
+
+<body>
+     <h1>数独ジェネレーター</h1>
+     <p>数独の問題をランダムで生成します。</p>
+     <p>(理論上は)全てのパターンの問題を生成できます。</p>
+     <p>複数回答ある問題が生成されることが<s>あります</s>多いです。（修正中）</p>
+
+    <div id="question">
+        <table id="question-table">
+            <tr id="Q0">
+                <td id="Q0-0" class="Qcell"></td>
+                <td id="Q0-1" class="Qcell"></td>
+                <td id="Q0-2" class="Qcell right"></td>
+                <td id="Q0-3" class="Qcell"></td>
+                <td id="Q0-4" class="Qcell"></td>
+                <td id="Q0-5" class="Qcell right"></td>
+                <td id="Q0-6" class="Qcell"></td>
+                <td id="Q0-7" class="Qcell"></td>
+                <td id="Q0-8" class="Qcell"></td>
+            </tr>
+            <tr id="Q1">
+                <td id="Q1-0" class="Qcell"></td>
+                <td id="Q1-1" class="Qcell"></td>
+                <td id="Q1-2" class="Qcell right"></td>
+                <td id="Q1-3" class="Qcell"></td>
+                <td id="Q1-4" class="Qcell"></td>
+                <td id="Q1-5" class="Qcell right"></td>
+                <td id="Q1-6" class="Qcell"></td>
+                <td id="Q1-7" class="Qcell"></td>
+                <td id="Q1-8" class="Qcell"></td>
+            </tr>
+            <tr id="Q2" class="bottom">
+                <td id="Q2-0" class="Qcell"></td>
+                <td id="Q2-1" class="Qcell"></td>
+                <td id="Q2-2" class="Qcell right"></td>
+                <td id="Q2-3" class="Qcell"></td>
+                <td id="Q2-4" class="Qcell"></td>
+                <td id="Q2-5" class="Qcell right"></td>
+                <td id="Q2-6" class="Qcell"></td>
+                <td id="Q2-7" class="Qcell"></td>
+                <td id="Q2-8" class="Qcell"></td>
+            </tr>
+            <tr id="Q3">
+                <td id="Q3-0" class="Qcell"></td>
+                <td id="Q3-1" class="Qcell"></td>
+                <td id="Q3-2" class="Qcell right"></td>
+                <td id="Q3-3" class="Qcell"></td>
+                <td id="Q3-4" class="Qcell"></td>
+                <td id="Q3-5" class="Qcell right"></td>
+                <td id="Q3-6" class="Qcell"></td>
+                <td id="Q3-7" class="Qcell"></td>
+                <td id="Q3-8" class="Qcell"></td>
+            </tr>
+            <tr id="Q4">
+                <td id="Q4-0" class="Qcell"></td>
+                <td id="Q4-1" class="Qcell"></td>
+                <td id="Q4-2" class="Qcell right"></td>
+                <td id="Q4-3" class="Qcell"></td>
+                <td id="Q4-4" class="Qcell"></td>
+                <td id="Q4-5" class="Qcell right"></td>
+                <td id="Q4-6" class="Qcell"></td>
+                <td id="Q4-7" class="Qcell"></td>
+                <td id="Q4-8" class="Qcell"></td>
+            </tr>
+            <tr id="Q5" class="bottom">
+                <td id="Q5-0" class="Qcell"></td>
+                <td id="Q5-1" class="Qcell"></td>
+                <td id="Q5-2" class="Qcell right"></td>
+                <td id="Q5-3" class="Qcell"></td>
+                <td id="Q5-4" class="Qcell"></td>
+                <td id="Q5-5" class="Qcell right"></td>
+                <td id="Q5-6" class="Qcell"></td>
+                <td id="Q5-7" class="Qcell"></td>
+                <td id="Q5-8" class="Qcell"></td>
+            </tr>
+            <tr id="Q6">
+                <td id="Q6-0" class="Qcell"></td>
+                <td id="Q6-1" class="Qcell"></td>
+                <td id="Q6-2" class="Qcell right"></td>
+                <td id="Q6-3" class="Qcell"></td>
+                <td id="Q6-4" class="Qcell"></td>
+                <td id="Q6-5" class="Qcell right"></td>
+                <td id="Q6-6" class="Qcell"></td>
+                <td id="Q6-7" class="Qcell"></td>
+                <td id="Q6-8" class="Qcell"></td>
+            </tr>
+            <tr id="Q7">
+                <td id="Q7-0" class="Qcell"></td>
+                <td id="Q7-1" class="Qcell"></td>
+                <td id="Q7-2" class="Qcell right"></td>
+                <td id="Q7-3" class="Qcell"></td>
+                <td id="Q7-4" class="Qcell"></td>
+                <td id="Q7-5" class="Qcell right"></td>
+                <td id="Q7-6" class="Qcell"></td>
+                <td id="Q7-7" class="Qcell"></td>
+                <td id="Q7-8" class="Qcell"></td>
+            </tr>
+            <tr id="Q8">
+                <td id="Q8-0" class="Qcell"></td>
+                <td id="Q8-1" class="Qcell"></td>
+                <td id="Q8-2" class="Qcell right"></td>
+                <td id="Q8-3" class="Qcell"></td>
+                <td id="Q8-4" class="Qcell"></td>
+                <td id="Q8-5" class="Qcell right"></td>
+                <td id="Q8-6" class="Qcell"></td>
+                <td id="Q8-7" class="Qcell"></td>
+                <td id="Q8-8" class="Qcell"></td>
+            </tr>
+        </table>
+
+    </div>
+    空欄の数：<input type="number" id="brank_num" value="45" max="64" min="1" step="1"></input>
+    <button id="regenerate">問題を再生成</button>
+    <div id="answer">
+
+    </div>
+
+    参考:https://idle.slashdot.org/story/12/01/08/1845258/lower-limit-found-for-sudoku-puzzle-clues
+    <script src="namberplace_generator.js"></script>
+</body>
+
+</html>

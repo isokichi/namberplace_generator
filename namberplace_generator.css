@@ -1,0 +1,41 @@
+
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  border: solid 4px black;/*表全体を線で囲う*/
+
+}
+table td {
+  border: solid 1px black;
+  /*実線 1px 黒*/
+  font-weight:  bold;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+table td.right {
+  border-right-width: 3px;
+  border-right-color: black;
+}
+table tr.bottom td {
+  border-bottom-width: 3px;
+  border-bottom-color: black;
+}
+
+.Blank{
+  width: 100%; /*親要素いっぱい広げる*/
+  height: 100%;
+  font-weight:  bold;
+  font-size: 30px;
+  color: dimgray;
+  text-align: center;
+  box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+  border: 0px solid; 
+}
+.Blank:focus {
+  border: 2px solid darkturquoise; 
+  z-index: 10;
+  outline: 0;
+}
